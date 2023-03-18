@@ -8,8 +8,8 @@ def sigmoide(x):
 # Función de coste
 def funcion_costo(weights, x, y):
     w11, w12, b1, w21, w22, b2, w31, w32, b3 = weights
-    z1 = sigmoide(w11 * x[1] + w21 * x[2] + b1)
-    z2 = sigmoide(w12 * x[1] + w22 * x[2] + b2)
+    z1 = sigmoide(w11 * x[0] + w21 * x[1] + b1)
+    z2 = sigmoide(w12 * x[0] + w22 * x[1] + b2)
     y_esperado = sigmoide(w31 * z1 + w32 * z2 + b3)
     return (y_esperado - y)**2
 
